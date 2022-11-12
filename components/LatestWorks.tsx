@@ -17,16 +17,11 @@ export default function LatestWorks({ children }: LatestWorksProps) {
           w="100%"
         >
           <GridItem colStart={{ base: 1, lg: 2 }} colSpan={{ base: 1, lg: 2 }}>
-            <Box>
+            <Box pb={6}>
               <Box as="h2" color="gray.200" fontSize="3xl">
                 Featured
               </Box>
-              <Heading
-                pb={6}
-                color="black"
-                fontSize="7xl"
-                textTransform="uppercase"
-              >
+              <Heading color="black" fontSize="7xl" textTransform="uppercase">
                 Work
               </Heading>
             </Box>

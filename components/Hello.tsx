@@ -4,8 +4,10 @@ import {
   Grid,
   GridItem,
   Heading,
+  Link,
   VStack,
 } from "@chakra-ui/react";
+import NextLink from "next/link";
 
 interface HelloProps {
   children: JSX.Element;
@@ -45,8 +47,12 @@ export default function Hello({ children }: HelloProps) {
                     love creating user-friendly interfaces.
                   </Box>
                   <Box as="p">
-                    I’m the co-founder of Premier Octet, an agency that develops
-                    website / apps for companies like Orpi.
+                    I’m the co-founder of{" "}
+                    <NextLink href="https://premieroctet.com" passHref>
+                      <Link as="a">Premier Octet</Link>
+                    </NextLink>
+                    , an agency that develops website / apps for companies like
+                    Orpi.
                     {/* <Typing>
                       <span>Orpi.</span>
                       <Typing.Backspace count={5} />

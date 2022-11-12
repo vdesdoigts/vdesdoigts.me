@@ -2,6 +2,61 @@ import { Grid, GridItem, HStack, Link } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 
+const linkProps = {
+  position: "relative",
+  color: "gray.200",
+  borderBottom: "none",
+  _hover: {
+    borderBottom: "none",
+  },
+  _before: {
+    content: "''",
+    position: "absolute",
+    width: "100%",
+    height: "1px",
+    background: "currentColor",
+    top: "100%",
+    left: 0,
+    pointerEvents: "none",
+    transformOrigin: "100% 50%",
+    transform: "scale3d(0, 1, 1)",
+    transition: "transform 0.3s cubic-bezier(0.7, 0, 0.2, 1)",
+  },
+  _after: {
+    content: "''",
+    position: "absolute",
+    top: "calc(100% + 4px)",
+    width: "100%",
+    height: "1px",
+    background: "currentColor",
+    left: 0,
+    pointerEvents: "none",
+    transformOrigin: "0% 50%",
+    transform: "scale3d(0, 1, 1)",
+    transition: "transform 0.3s cubic-bezier(0.7, 0, 0.2, 1)",
+  },
+  sx: {
+    "&.active": {
+      color: "black",
+    },
+    "&.active:before": {
+      transformOrigin: "0% 50%",
+      transform: "scale3d(1, 1, 1)",
+      transitionTimingFunction: "cubic-bezier(0.4, 1, 0.8, 1)",
+    },
+    "&.active:after": {
+      transformOrigin: "100% 50%",
+      transform: "scale3d(1, 1, 1)",
+      transitionTimingFunction: "cubic-bezier(0.4, 1, 0.8, 1)",
+    },
+    "&:hover:before": {
+      transformOrigin: "100% 50%",
+      transform: "scale3d(1, 1, 1)",
+      transitionTimingFunction: "cubic-bezier(0.4, 1, 0.8, 1)",
+    },
+  },
+};
+
 export default function Menu() {
   const router = useRouter();
 
@@ -24,28 +79,25 @@ export default function Menu() {
           color="gray.200"
         >
           <NextLink href="/">
+            {/* @ts-ignore */}
             <Link
               className={router.pathname == "/" ? "active" : ""}
-              sx={{
-                "&.active": {
-                  color: "black",
-                  "&:hover": {
-                    textDecoration: "none",
-                  },
-                },
-              }}
+              {...linkProps}
             >
               about
             </Link>
           </NextLink>
           <NextLink href="/work">
-            <Link>work</Link>
+            {/* @ts-ignore */}
+            <Link {...linkProps}>work</Link>
           </NextLink>
           <NextLink href="/writing">
-            <Link>writing</Link>
+            {/* @ts-ignore */}
+            <Link {...linkProps}>writing</Link>
           </NextLink>
           <NextLink href="/contact">
-            <Link>contact</Link>
+            {/* @ts-ignore */}
+            <Link {...linkProps}>contact</Link>
           </NextLink>
         </HStack>
       </GridItem>
