@@ -1,12 +1,12 @@
+import Hello from "@/components/Hello";
+import LatestPosts from "@/components/LatestPosts";
+import LatestWorks from "@/components/LatestWorks";
+import Menu from "@/components/Menu";
+import PostsGrid from "@/components/PostsGrid";
+import WorksGrid from "@/components/WorksGrid";
 import { Box } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Hello from "../components/Hello";
-import LatestPosts from "../components/LatestPosts";
-import LatestWorks from "../components/LatestWorks";
-import Menu from "../components/Menu";
-import PostsGrid from "../components/PostsGrid";
-import WorksGrid from "../components/WorksGrid";
 
 const Home: NextPage = () => {
   return (
