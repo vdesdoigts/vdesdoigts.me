@@ -3,17 +3,16 @@ import Link from "next/link";
 
 interface PostItemProps {
   post: {
-    tag: {
-      color: string;
-      title: string;
-    };
-    title: string;
+    slug: string;
+    meta: any;
   };
 }
 
 export default function PostItem({ post }: PostItemProps) {
+  const { slug, meta } = post;
+
   return (
-    <Link passHref href="/">
+    <Link passHref href={`/writing/${slug}`}>
       <Box as="a">
         <Grid
           as="article"
@@ -32,7 +31,7 @@ export default function PostItem({ post }: PostItemProps) {
           </GridItem>
           <GridItem colSpan={{ base: 1, lg: 2 }}>
             <Heading as="h2" color="black" fontSize="4xl" fontWeight="400">
-              {post.title}
+              {meta.title}
             </Heading>
           </GridItem>
         </Grid>

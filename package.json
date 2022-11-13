@@ -21,7 +21,9 @@
     "prism-react-renderer": "^1.3.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.6.0"
+    "react-icons": "^4.6.0",
+    "remark-frontmatter": "^4.0.1",
+    "remark-mdx-frontmatter": "^2.1.1"
   },
   "devDependencies": {
     "@types/node": "18.8.4",

@@ -47,7 +47,7 @@ const data = [
   },
 ];
 
-export default function PostsGrid() {
+export default function PostsGrid({ posts }: any) {
   const [hovered, setHovered] = useState<number | null>(null);
 
   const onMouseOver = (index: number) => {
@@ -66,9 +66,9 @@ export default function PostsGrid() {
         rowGap={0}
         w="100%"
       >
-        {data.map((item, index) => (
+        {posts.map((post: any, index: number) => (
           <GridItem
-            key={index}
+            key={post.slug}
             pb={8}
             opacity={
               hovered === index ? 1 : typeof hovered === "number" ? 0.4 : 1
@@ -77,7 +77,7 @@ export default function PostsGrid() {
             onMouseEnter={() => onMouseOver(index)}
             onMouseLeave={onMouseOut}
           >
-            <PostItem post={item} />
+            <PostItem post={post} />
           </GridItem>
         ))}
       </Grid>
