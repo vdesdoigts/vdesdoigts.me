@@ -4,7 +4,7 @@ export default function Hello() {
   return (
     <div className="flex max-h-[47.5rem] basis-[100vh] bg-primary">
       <div className="container mx-auto flex items-end px-4 py-20">
-        <div className="grid grid-cols-1 gap-x-4 px-4 lg:grid-cols-3">
+        <div className="grid w-full grid-cols-1 gap-x-8 px-4 lg:grid-cols-3">
           <div className="col-span-1 lg:col-span-2 lg:col-start-2">
             <div>
               <div className="relative pb-11">
