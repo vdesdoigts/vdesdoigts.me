@@ -4,7 +4,7 @@ import ShowItem from "@/components/ShowItem";
 
 export default function Explore() {
   return (
-    <div className="pt-40">
+    <div className="pt-44">
       <div className="container mx-auto px-4">
         <div className="pb-6">
           <Heading title="Explore" subtitle="At your own risk" />

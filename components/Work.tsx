@@ -5,7 +5,7 @@ import PremierOctet from "@/components/previews/PremierOctet";
 
 export default function Work() {
   return (
-    <div className="pt-40">
+    <div className="pt-44">
       <div className="container mx-auto px-4">
         <div className="pb-6">
           <Heading title="Work" subtitle="In production" />

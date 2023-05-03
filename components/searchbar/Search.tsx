@@ -24,7 +24,7 @@ export function Search() {
         {...buttonProps}
       >
         <SearchIcon className="h-6 w-6 stroke-current" />
-        Search in wrtiting
+        Search a story
         <kbd className="text-2xs ml-auto text-zinc-400 dark:text-zinc-500">
           <kbd className="font-sans">{modifierKey}</kbd>
           <kbd className="font-sans">K</kbd>
@@ -43,7 +43,7 @@ export function MobileSearch() {
       <button
         type="button"
         className="flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 dark:hover:bg-white/5 lg:hidden focus:[&:not(:focus-visible)]:outline-none"
-        aria-label="Search in wrtiting"
+        aria-label="Search a story"
         {...buttonProps}
       >
         <SearchIcon className="h-5 w-5 stroke-zinc-900 dark:stroke-white" />
