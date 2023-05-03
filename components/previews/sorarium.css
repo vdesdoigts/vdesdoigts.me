@@ -1,0 +1,10 @@
+.swiper.swiper {
+  position: initial;
+  width: 38%;
+}
+.swiper-wrapper.swiper-wrapper {
+  cursor: inherit !important;
+}
+.swiper-slide-shadow.swiper-slide-shadow {
+  display: none;
+}

@@ -40,6 +40,30 @@ const computedFields = {
   },
 };
 
+export const Explore = defineDocumentType(() => ({
+  name: "Explore",
+  filePathPattern: `explore/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true,
+    },
+    publishedAt: {
+      type: "string",
+      required: true,
+    },
+    summary: {
+      type: "string",
+      required: true,
+    },
+    image: {
+      type: "string",
+    },
+  },
+  computedFields,
+}));
+
 export const Writing = defineDocumentType(() => ({
   name: "Writing",
   filePathPattern: `writing/*.mdx`,
@@ -66,7 +90,7 @@ export const Writing = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "content",
-  documentTypes: [Writing],
+  documentTypes: [Explore, Writing],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [

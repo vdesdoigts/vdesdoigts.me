@@ -2,6 +2,7 @@ import Heading from "@/components/Heading";
 import ShowItem from "@/components/ShowItem";
 import Playgrounds from "@/components/previews/Playgrounds";
 import PremierOctet from "@/components/previews/PremierOctet";
+import ToyLovers from "@/components/previews/ToyLovers";
 
 export default function Work() {
   return (
@@ -12,7 +13,11 @@ export default function Work() {
         </div>
         <div className="grid w-full grid-cols-3 gap-x-8 gap-y-12 pt-8">
           <div className="col-span-1">
-            <a href="" className="group">
+            <a
+              href="https://premieroctet.com"
+              target="_blank"
+              className="group"
+            >
               <ShowItem
                 desc="Web and mobile application development"
                 title="Premier Octet"
@@ -36,13 +41,13 @@ export default function Work() {
             </a>
           </div>
           <div className="col-span-1">
-            <a href="" className="group">
+            <a href="https://toylovers.club" className="group" target="_blank">
               <ShowItem
-                desc="A collection of my favorite Notion templates"
+                desc="Online magazine about toy photography"
                 title="Toy Lovers"
                 url="toylovers.club"
               >
-                <div></div>
+                <ToyLovers />
               </ShowItem>
             </a>
           </div>

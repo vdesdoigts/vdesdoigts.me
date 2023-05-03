@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function QuickAccess() {
   return (
     <div className="c-quick-access border border-primary-500 bg-white p-6">
@@ -15,7 +17,13 @@ export default function QuickAccess() {
         </li>
       </ul>
       <div className="pt-6">
-        <a className="">&#8594; Explore more</a>
+        <Link
+          href="/explore"
+          className="inline-flex items-center gap-2 text-primary-500 transition-all hover:translate-x-1"
+        >
+          <span className="inline-block text-lg">→</span>{" "}
+          <span className="inline-block text-lg font-light">explore more</span>
+        </Link>
       </div>
     </div>
   );

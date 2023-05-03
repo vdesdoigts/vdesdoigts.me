@@ -1,18 +1,19 @@
 import Image from "next/image";
 
-export default function PremierOctet() {
+export default function NotionNBA() {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full overflow-hidden">
       <Image
-        src="/assets/po-bg.png"
-        alt="Premier Octet gradient background"
+        src="/images/toy-lovers/toy-lovers-browser.png"
+        alt="Browser icon"
         width={1226}
         height={922}
+        className="relative z-10 w-full"
       />
       <div className="absolute left-0 top-0 h-full w-full scale-100 transition-transform duration-700 hover:scale-110">
         <Image
-          src="/assets/po-icon.png"
-          alt="Premier Octet icon"
+          src="/images/toy-lovers/toy-lovers-bg.png"
+          alt="Toy Lovers background"
           width={1226}
           height={922}
         />

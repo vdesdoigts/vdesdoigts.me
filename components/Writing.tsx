@@ -19,14 +19,16 @@ export default function Writing({ allWritings }: { allWritings: IWriting[] }) {
               return 1;
             })}
           />
-          <div className="grid w-full grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-3">
+          <div className="grid w-full grid-cols-1 gap-x-8 gap-y-8 pt-4 lg:grid-cols-3">
             <div className="col-span-1 lg:col-span-2 lg:col-start-2">
               <Link
                 href="/writing"
-                className="text-md inline-flex h-12 items-center gap-2 rounded-full py-2 text-primary-500 transition-all hover:translate-x-1"
+                className="inline-flex items-center gap-2 py-2 text-primary-500 transition-all hover:translate-x-1"
               >
                 <span className="inline-block text-lg">→</span>{" "}
-                <span className="inline-block text-xl">all stories</span>
+                <span className="inline-block text-xl font-light">
+                  all stories
+                </span>
               </Link>
             </div>
           </div>
