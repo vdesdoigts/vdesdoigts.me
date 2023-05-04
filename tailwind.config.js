@@ -17,6 +17,7 @@ module.exports = {
         primary: {
           100: "#B397FE",
           500: "#4701FF",
+          600: "#6C4DBD",
         },
         gray: {
           ...colors.gray,
@@ -28,5 +29,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

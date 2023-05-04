@@ -20,11 +20,13 @@ export function Search() {
     <>
       <button
         type="button"
-        className="text-md hidden h-12 w-full items-center gap-2 rounded-full bg-primary-100/10 pl-3 pr-6 font-light text-primary-500 lg:flex focus:[&:not(:focus-visible)]:outline-none"
+        className="text-md group hidden h-12 w-full items-center gap-2 rounded-full bg-primary-100/10 pl-3 pr-6 font-light text-primary-500 lg:flex focus:[&:not(:focus-visible)]:outline-none"
         {...buttonProps}
       >
         <SearchIcon className="h-6 w-6 stroke-current" />
-        Search a story
+        <span className="transition-transform group-hover:translate-x-0.5">
+          Search a story
+        </span>
         <kbd className="text-2xs ml-auto text-zinc-400 dark:text-zinc-500">
           <kbd className="font-sans">{modifierKey}</kbd>
           <kbd className="font-sans">K</kbd>

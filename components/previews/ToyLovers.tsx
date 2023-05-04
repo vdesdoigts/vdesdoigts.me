@@ -8,7 +8,7 @@ export default function NotionNBA() {
         alt="Browser icon"
         width={1226}
         height={922}
-        className="relative z-10 w-full"
+        className="pointer-events-none relative z-10 w-full"
       />
       <div className="absolute left-0 top-0 h-full w-full scale-100 transition-transform duration-700 hover:scale-110">
         <Image
