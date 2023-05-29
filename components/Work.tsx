@@ -11,7 +11,7 @@ export default function Work() {
         <div className="pb-6">
           <Heading title="Work" subtitle="In production" />
         </div>
-        <div className="grid w-full grid-cols-3 gap-x-8 gap-y-12 pt-8">
+        <div className="grid w-full grid-cols-3 gap-x-8 gap-y-14 pt-8">
           <div className="col-span-1">
             <a
               href="https://premieroctet.com"
@@ -22,7 +22,7 @@ export default function Work() {
                 desc="Web and mobile application development"
                 title="Premier Octet"
                 url="premieroctet.com"
-                color="[#5057F2]"
+                // color="[#5057F2]"
               >
                 <PremierOctet />
               </ShowItem>
@@ -34,7 +34,7 @@ export default function Work() {
                 desc="Find the best streetball court around you"
                 title="Playgrounds"
                 url="vdesdoigts.me/playgrounds"
-                color="[#F06400]"
+                // color="[#F06400]"
               >
                 <Playgrounds />
               </ShowItem>

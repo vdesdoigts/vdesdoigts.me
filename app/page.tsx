@@ -7,7 +7,7 @@ import { allWritings } from "contentlayer/generated";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col ">
+    <main className="flex min-h-screen flex-col">
       <Hello />
       <Writing allWritings={allWritings} />
       <Explore />

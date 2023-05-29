@@ -1,3 +1,4 @@
+import LinksBox from "@/components/LinksBox";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,65 +25,42 @@ function RoundedImage(props: any) {
   return <Image alt={props.alt} className="rounded-lg" {...props} />;
 }
 
-function Callout(props: any) {
+function Inner(props: any) {
   return (
-    <div className="my-8 flex rounded-lg border border-neutral-200 bg-neutral-100 p-4 dark:border-neutral-800 dark:bg-neutral-900">
-      <div className="mr-4 flex w-4 items-center">{props.emoji}</div>
-      <div className="callout w-full">{props.children}</div>
+    <div className="container mx-auto max-w-[780px] px-4">{props.children}</div>
+  );
+}
+
+function Box(props: any) {
+  return <div {...props} />;
+}
+
+function ImageGrid(props: any) {
+  return (
+    <div
+      className={`mx-auto grid max-w-[1000px] grid-cols-1 gap-2 pb-6 pt-4 prose-p:my-0 prose-img:my-0 md:grid-cols-2 ${props.className}`}
+    >
+      {props.children}
     </div>
   );
 }
 
-function ProsCard({ title, pros }: any) {
+function FolderGrid({
+  links,
+  ...props
+}: {
+  links: {
+    label: string;
+    url: string;
+  }[];
+  children: any;
+}) {
   return (
-    <div className="my-4 w-full rounded-xl border border-emerald-200 bg-neutral-50 p-6 dark:border-emerald-900 dark:bg-neutral-900">
-      <span>{`You might use ${title} if...`}</span>
-      <div className="mt-4">
-        {pros.map((pro: any) => (
-          <div key={pro} className="mb-2 flex items-baseline font-medium">
-            <div className="mr-2 h-4 w-4">
-              <svg className="h-4 w-4 text-emerald-500" viewBox="0 0 24 24">
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-                  <path d="M22 4L12 14.01l-3-3" />
-                </g>
-              </svg>
-            </div>
-            <span>{pro}</span>
-          </div>
-        ))}
+    <div className="mx-auto grid max-w-[1100px] grid-cols-1 gap-2 pb-6 pt-4 prose-p:my-0 prose-img:my-0 md:grid-cols-7">
+      <div className="col-span-1 md:col-span-2">
+        <LinksBox links={links} />
       </div>
-    </div>
-  );
-}
-
-function ConsCard({ title, cons }: any) {
-  return (
-    <div className="my-6 w-full rounded-xl border border-red-200 bg-neutral-50 p-6 dark:border-red-900 dark:bg-neutral-900">
-      <span>{`You might not use ${title} if...`}</span>
-      <div className="mt-4">
-        {cons.map((con: any) => (
-          <div key={con} className="mb-2 flex items-baseline font-medium">
-            <div className="mr-2 h-4 w-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                className="h-4 w-4 text-red-500"
-              >
-                <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
-              </svg>
-            </div>
-            <span>{con}</span>
-          </div>
-        ))}
-      </div>
+      <div className="col-span-1 md:col-span-5">{props.children}</div>
     </div>
   );
 }
@@ -90,9 +68,11 @@ function ConsCard({ title, cons }: any) {
 const components = {
   Image: RoundedImage,
   a: CustomLink,
-  Callout,
-  ProsCard,
-  ConsCard,
+  Inner,
+  ImageGrid,
+  Box,
+  LinksBox,
+  FolderGrid,
 };
 
 interface MdxProps {

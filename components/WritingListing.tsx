@@ -1,4 +1,5 @@
 import { Writing as IWriting } from "contentlayer/generated";
+import { DateTime } from "luxon";
 import Link from "next/link";
 
 export default function WritingListing({
@@ -20,12 +21,14 @@ export default function WritingListing({
                 className="text-xl font-light text-gray"
                 dateTime="2023-03-30"
               >
-                Mar 22, 2023
+                {DateTime.fromISO(post.publishedAt)
+                  .setLocale("en")
+                  .toFormat("DD")}
               </time>
             </div>
             <div className="col-span-1 lg:col-span-2 lg:col-start-2">
               <h2 className="max-w-[800px] font-serif text-4xl">
-                Create a NBA schedule with Notion and their respective APIs
+                {post.title}
               </h2>
             </div>
           </article>

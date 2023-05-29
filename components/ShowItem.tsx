@@ -1,6 +1,6 @@
 export default function ShowItem({
   children,
-  color = "primary-100",
+  color = "primary-500",
   desc,
   title,
   url,
@@ -12,7 +12,7 @@ export default function ShowItem({
   url: string;
 }) {
   return (
-    <article className="grid w-full">
+    <article className="group grid w-full">
       <div>{children}</div>
       <div className="grid w-full gap-1 pt-4">
         <h2 className="font-serif text-2xl">{title}</h2>

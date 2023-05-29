@@ -1,5 +1,5 @@
 import { Mdx } from "@/components//Mdx";
-import { allWritings } from "contentlayer/generated";
+import { allExplores } from "contentlayer/generated";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 // import { getTweets } from "lib/twitter";
@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import { DateTime } from "luxon";
 
 export async function generateStaticParams() {
-  return allWritings.map((post) => ({
+  return allExplores.map((post) => ({
     slug: post.slug,
   }));
 }
@@ -16,7 +16,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: any): Promise<Metadata | undefined> {
-  const post = allWritings.find(
+  const post = allExplores.find(
     (post) => post.slug.split("/").pop() === params.slug
   );
 
@@ -59,8 +59,8 @@ export async function generateMetadata({
   };
 }
 
-export default async function WritingPage({ params }: any) {
-  const post = allWritings.find(
+export default async function ExplorePage({ params }: any) {
+  const post = allExplores.find(
     (post) => post.slug.split("/").pop() === params.slug
   );
 
@@ -75,7 +75,7 @@ export default async function WritingPage({ params }: any) {
       </script> */}
       <header className="container mx-auto mb-10 max-w-[780px] px-4">
         <div>
-          <BackButton href="/writing" />
+          <BackButton href="/explore" />
         </div>
       </header>
       <article
@@ -96,9 +96,6 @@ export default async function WritingPage({ params }: any) {
           </h1>
         </header>
         <Mdx code={post.body.code} />
-        <div className="container mx-auto mb-28 mt-24 max-w-[780px] px-4">
-          <p>Hope you like this content. See you later, alligator.</p>
-        </div>
       </article>
       <Footer />
     </main>

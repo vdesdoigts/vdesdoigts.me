@@ -1,4 +1,5 @@
 import BackButton from "@/components/BackButton";
+import Footer from "@/components/Footer";
 import Heading from "@/components/Heading";
 import WritingListing from "@/components/WritingListing";
 import { Search } from "@/components/searchbar/Search";
@@ -6,20 +7,20 @@ import { allWritings } from "contentlayer/generated";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog",
-  description: "Read my thoughts on software development, design, and more.",
+  title: "Writing",
+  description: "Read my thoughts on stuff I like.",
 };
 
-export default async function BlogPage() {
+export default async function WritingPage() {
   return (
-    <section>
-      <header className="mb-20">
+    <main>
+      <header className="mb-10">
         <div className="container mx-auto px-4 py-4">
           <div className="grid w-full grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-3">
             <div className="col-span-1 lg:col-span-2 lg:col-start-2">
               <div className="flex gap-2">
                 <div>
-                  <BackButton href="/writing" />
+                  <BackButton href="/" />
                 </div>
                 <div className="w-full max-w-[382px]">
                   <Search />
@@ -44,6 +45,7 @@ export default async function BlogPage() {
           />
         </div>
       </div>
-    </section>
+      <Footer />
+    </main>
   );
 }

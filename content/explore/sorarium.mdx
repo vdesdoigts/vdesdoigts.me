@@ -1,12 +1,125 @@
 ---
-title: "2022 Year in Review"
+title: "Sorarium, collectible showcase for Sorare"
 publishedAt: "2023-01-02"
 summary: "Celebrating the work of my teams at Vercel."
 image: /images/sorarium/og.png
 ---
 
-My biggest accomplishment of 2022 was not my own, but the collective work of folks on my teams at Vercel. They've chosen to join me on this ambitious journey to make the web faster. I'd like to share the internal Slack message I wrote to celebrate their amazing work:
+<Inner>
+[Sorare](https://sorare.com/) is an online fantasy NBA platform that combines the excitement of traditional fantasy sports with the world of blockchain technology. It offers a unique gaming experience centered around collecting, trading, and managing digital player cards representing real-life players.
 
----
+As an avid NBA fan, I found myself drawn to the game and acquired a few cards. However, as a passionate collector, I realized that the platform didn't quite offer the variety and customization I desired. **I wanted the ability to showcase my own unique collections and share them with the Sorare community.** That's why I created [Sorarium](https://sorarium.club/).
 
-**Happy new year!** What better way to start 2023 than to celebrate the work the Developer Experience teams accomplished in 2022:
+</Inner>
+
+<Inner>
+
+## The problem with Sorare
+
+One of the joys of collecting physical cards is the ability to curate and organize them according to our preferences. It allows collectors to showcase their favorite players, create thematic collections, or even arrange them chronologically. However, Sorare restricts these possibilities, leaving users with a standard gallery that provides little room for personalization.
+
+## Sorarium to the rescue
+
+Sorarium is a web app that allows Sorare users to create and share their own unique collections. **It provides a simple and intuitive interface for collectors to create and customize their galleries.** Users can create collections based on their favorite players, teams, or even specific events. They can also arrange their cards in a way that suits their aesthetic or organizational preferences.
+
+## Under the hood
+
+Sorarium is a [Next.js](https://nextjs.org/) project, with [Prisma](https://www.prisma.io/) to manage the database and [Material UI](https://mui.com/) for the UI.
+
+Nothing very fancy here, but let's talk about the [Sorare GraphQL API](https://github.com/sorare/api), which allows me to query information about the user's cards. To get started [I had to register and obtain credentials](https://help.sorare.com/hc/en-us/articles/10873240230941-How-can-I-get-access-to-Sorare-s-API-). Once registered, I can authenticate requests to retrieve data from Sorare's API. If you are interested, you can check the [Sports GraphQL playground](https://api.sorare.com/sports/graphql/playground) to see what's available.
+
+```tsx
+import { getSdk } from "@/gql/sdk";
+import axios from "axios";
+import { GraphQLClient } from "graphql-request";
+
+const sorareGraphql = new GraphQLClient(
+  "https://api.sorare.com/sports/graphql"
+);
+
+export const sorareGraphqlClient = getSdk(sorareGraphql, (action) => {
+  return action({
+    APIKEY: process.env.NEXT_PUBLIC_SORARE_API_UID,
+  });
+});
+```
+
+```tsx
+export const getSorareCard = async (slug: string) => {
+  const data = await sorareGraphqlClient.NBACard({
+    slug,
+  });
+
+  return data;
+};
+```
+
+I can parse the data received and create corresponding entries in my Prisma database. You can check the [github repository](https://github.com/sorarium.club) for more details.
+
+Last thing, **users can sign-in to Sorarium using their Sorare account**. This is done by redirecting them to Sorare's authentication page, where they can enter their credentials. Once authenticated, Sorare will redirect them back to Sorarium with credentials. This credentials can then be used to make authenticated requests to Sorare's API.
+
+```tsx
+const openLogin = () => {
+  window.open(
+    `https://sorare.com/oauth/authorize?client_id=${process.env.NEXT_PUBLIC_SORARE_API_UID}&redirect_uri=${process.env.NEXT_PUBLIC_SORARE_REDIRECT_URI}&response_type=code&scope=`,
+    "_self"
+  );
+};
+```
+
+```tsx
+export const getUserNbaCards = async (user: User) => {
+  let cursor = null;
+  const cardsList: CurrentUserNbaCardsQuery["currentSportsUser"]["nbaCards"]["nodes"] =
+    [];
+
+  do {
+    const players = await sorareGraphqlClient.CurrentUserNBACards(
+      {
+        first: 20,
+        after: cursor,
+      },
+      {
+        Authorization: `Bearer ${user.sorareToken}`,
+      }
+    );
+
+    cardsList.push(
+      ...players.currentSportsUser.nbaCards.nodes.filter(
+        (node) => node.rarity !== "common"
+      )
+    );
+
+    if (players.currentSportsUser.nbaCards.pageInfo.hasNextPage) {
+      cursor = players.currentSportsUser.nbaCards.pageInfo.endCursor;
+    } else {
+      cursor = null;
+    }
+  } while (cursor !== null);
+
+  return cardsList;
+};
+```
+
+And that's all for today, see you later!
+
+<Box className="pt-28">
+  <LinksBox
+    links={[
+      {
+        label: "sorarium.club",
+        url: "https://sorarium.club/",
+      },
+      {
+        label: "github.com/sorarium.club",
+        url: "https://github.com/sorarium.club",
+      },
+      {
+        label: "sorare.com",
+        url: "https://sorare.com/",
+      },
+    ]}
+  />
+</Box>
+
+</Inner>
