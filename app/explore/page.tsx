@@ -12,7 +12,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Explore",
   description:
-    "Where I’m exploring ideas, make unfinished side projects and funny stuff.",
+    "Where I’m exploring ideas, making unfinished side projects and funny stuff.",
 };
 
 export default async function ExplorePage() {
@@ -37,8 +37,8 @@ export default async function ExplorePage() {
             title="Explore"
             subtitle="At your own risk"
             desc={
-              <p className="max-w-[700px] pt-6 text-2xl font-light">
-                Where I’m exploring ideas, make unfinished side projects and{" "}
+              <p className="max-w-[640px] pt-6 text-2xl font-light">
+                Where I’m exploring ideas, making unfinished side projects and{" "}
                 <span className="line-through">funny</span> stuff.
               </p>
             }
@@ -54,7 +54,7 @@ export default async function ExplorePage() {
                 <ShowItem
                   desc="Season games, teams and players in Notion"
                   title="NBA in Notion"
-                  url="vdesdoigts.me/notion-nba"
+                  url="notion.app/nba-schedule"
                 >
                   <NotionNBA />
                 </ShowItem>
@@ -72,7 +72,7 @@ export default async function ExplorePage() {
               </Link>
             </div>
             <div className="col-span-1">
-              <Link href="/explore/genshin">
+              <Link href="/explore/genshin-impact-companion">
                 <ShowItem
                   desc="Find out exactly what you need and where to get it"
                   title="Companion for Genshin Impact"

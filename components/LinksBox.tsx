@@ -8,7 +8,7 @@ interface LinksBoxProps {
 export default function LinksBox({ links }: LinksBoxProps) {
   return (
     <div className="not-prose c-quick-access border border-primary-500 bg-white p-6">
-      <h2 className="font-serif text-xl">Related</h2>
+      <h2 className="font-serif text-xl">Resources</h2>
       <ul className="grid grid-cols-1 gap-1 pt-4 lg:grid-cols-2">
         {links.map((link) => (
           <li>

@@ -14,8 +14,8 @@ export default function Explore() {
             title="Explore"
             subtitle="At your own risk"
             desc={
-              <p className="max-w-[700px] pt-6 text-2xl font-light">
-                Where I’m exploring ideas, make unfinished side projects and{" "}
+              <p className="max-w-[640px] pt-6 text-2xl font-light">
+                Where I’m exploring ideas, making unfinished side projects and{" "}
                 <span className="line-through">funny</span> stuff.
               </p>
             }
