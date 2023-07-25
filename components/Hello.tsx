@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Hello() {
   return (
-    <div className="flex max-h-[47.5rem] basis-[100vh] bg-main">
-      <div className="container mx-auto flex items-end px-4 py-20">
+    <div className="flex lg:max-h-[47.5rem] basis-[100vh] bg-main">
+      <div className="container mx-auto flex items-end px-4 py-20 lg:pt-24 lg:pb-40">
         <div className="grid w-full grid-cols-1 gap-x-8 px-4 lg:grid-cols-3">
           <div className="col-span-1 lg:col-span-2 lg:col-start-2">
             <div>
@@ -25,18 +25,30 @@ export default function Hello() {
                   className="absolute left-[2px] top-[2px] z-0"
                 />
               </div>
-              <div className="max-w-[45rem] text-3xl font-light leading-normal">
+              <div className="max-w-[45rem] text-2xl lg:text-3xl font-light leading-normal">
                 <p className="pb-8">
                   I’m Vincent, a multidisciplinary developer and creative. With
                   strong skills in development and user experience, I love
                   creating user-friendly interfaces.
                 </p>
                 <p>
-                  I’m the co-founder of Premier Octet, an agency that develops
+                  I’m the co-founder of <a href="premieroctet.com" target="_blank">Premier Octet</a>, an agency that develops
                   website / apps for companies like Orpi.
                 </p>
               </div>
             </div>
+          </div>
+          <div className="col-span-1 lg:order-first">
+          <div className="relative h-full pt-12 lg:pt-0">
+          <Image
+                  priority
+                  width="1440"
+                  height="1405"
+                  src="/assets/avatar.png"
+                  alt="hello there"
+                  className="w-full lg:w-[225%] xl:w-[155%] 2xl:w-[135%] z-0 lg:absolute lg:right-[-70px] lg:bottom-[-145px] xl:right-[-70px]  2xl:right-[-70px] max-w-none"
+                />
+                </div>
           </div>
         </div>
       </div>

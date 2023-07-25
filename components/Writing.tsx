@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Writing({ allWritings }: { allWritings: IWriting[] }) {
   return (
-    <div className="pt-28">
+    <div className="pt-20 lg:pt-28">
       <div className="container mx-auto px-4">
         <div className="pb-6">
           <Heading title="Writing" subtitle="Latest posts" />

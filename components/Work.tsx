@@ -6,12 +6,12 @@ import ToyLovers from "@/components/previews/ToyLovers";
 
 export default function Work() {
   return (
-    <div className="pt-44">
+    <div className="pt-32 lg:pt-44">
       <div className="container mx-auto px-4">
         <div className="pb-6">
           <Heading title="Work" subtitle="In production" />
         </div>
-        <div className="grid w-full grid-cols-3 gap-x-8 gap-y-14 pt-8">
+        <div className="grid w-full grid-cols-1 lg:grid-cols-3 gap-x-8 gap-y-14 pt-8">
           <div className="col-span-1">
             <a
               href="https://premieroctet.com"

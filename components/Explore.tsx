@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Explore() {
   return (
-    <div className="pt-44">
+    <div className="pt-32 lg:pt-44">
       <div className="container mx-auto px-4">
         <div className="pb-6">
           <Heading
@@ -21,7 +21,7 @@ export default function Explore() {
             }
           />
         </div>
-        <div className="grid w-full grid-cols-3 gap-x-8 gap-y-14 pt-8">
+        <div className="grid w-full grid-cols-1 lg:grid-cols-3 gap-x-8 gap-y-14 pt-8">
           <div className="col-span-1">
             <Link
               href="https://www.notion.so/vdesdoigts/The-Great-NBA-Dashboard-2b9d968e8b37494ba0ff943e8f42aa8d?pvs=4"
