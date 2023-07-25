@@ -96,9 +96,6 @@ export default async function WritingPage({ params }: any) {
           </h1>
         </header>
         <Mdx code={post.body.code} />
-        <div className="container mx-auto mb-28 mt-24 max-w-[780px] px-4">
-          <p>Hope you like this content. See you later, alligator.</p>
-        </div>
       </article>
       <Footer />
     </main>

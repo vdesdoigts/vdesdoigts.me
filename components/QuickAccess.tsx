@@ -7,7 +7,7 @@ export default function QuickAccess() {
       <ul className="grid grid-cols-1 gap-1 pt-4">
         <li>
           <a
-            className="text-lg font-light underline"
+            className="text-lg font-light underline hover:text-primary-500"
             href="/explore/genshin-impact-companion"
           >
             Companion tool for Genshin Impact
@@ -15,7 +15,7 @@ export default function QuickAccess() {
         </li>
         <li>
           <a
-            className="text-lg font-light underline"
+            className="text-lg font-light underline hover:text-primary-500"
             href="/explore/the-journey"
           >
             Animated showcase of LeBron James' career
