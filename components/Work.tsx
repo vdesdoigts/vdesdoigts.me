@@ -6,7 +6,7 @@ import ToyLovers from "@/components/previews/ToyLovers";
 
 export default function Work() {
   return (
-    <div className="pt-28 xl:pt-44">
+    <div className="pt-20 xl:pt-44">
       <div className="container mx-auto px-4">
         <div className="pb-6">
           <Heading title="Work" subtitle="In production" />
@@ -29,7 +29,7 @@ export default function Work() {
             </a>
           </div>
           <div className="col-span-1">
-            <a href="" className="group">
+            <a href="/work/playgrounds" className="group">
               <ShowItem
                 desc="Find the best streetball court around you"
                 title="Playgrounds"

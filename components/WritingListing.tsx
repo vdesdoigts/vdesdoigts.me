@@ -27,7 +27,7 @@ export default function WritingListing({
               </time>
             </div>
             <div className="col-span-1 lg:col-span-2 lg:col-start-2">
-              <h2 className="max-w-[800px] origin-left font-serif text-2xl font-normal transition-transform hover:scale-105 lg:text-3xl xl:text-4xl">
+              <h2 className="max-w-[800px] origin-left font-serif text-2xl font-normal transition-colors hover:text-primary-500 lg:text-3xl xl:text-4xl">
                 {post.title}
               </h2>
             </div>

@@ -7,18 +7,20 @@ export default function QuickAccess() {
       <ul className="grid grid-cols-1 gap-1 pt-4">
         <li>
           <a
-            className="text-lg font-light underline hover:text-primary-500"
+            className="text-lg font-light hover:text-primary-500"
             href="/explore/genshin-impact-companion"
           >
-            Companion tool for Genshin Impact
+            <span className="text-lg">&#x2022;</span> Companion tool for Genshin
+            Impact
           </a>
         </li>
         <li>
           <a
-            className="text-lg font-light underline hover:text-primary-500"
+            className="text-lg font-light hover:text-primary-500"
             href="/explore/the-journey"
           >
-            Animated showcase of LeBron James' career
+            <span className="text-lg">&#x2022;</span> Animated showcase of
+            LeBron James' career
           </a>
         </li>
       </ul>

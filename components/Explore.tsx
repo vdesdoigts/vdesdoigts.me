@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Explore() {
   return (
-    <div className="pt-28 xl:pt-44">
+    <div className="pt-20 xl:pt-44">
       <div className="container mx-auto px-4">
         <div className="pb-6">
           <Heading

@@ -31,6 +31,14 @@ function Inner(props: any) {
   );
 }
 
+function LargeInner(props: any) {
+  return (
+    <div className="container mx-auto max-w-[1000px] px-4">
+      {props.children}
+    </div>
+  );
+}
+
 function Box(props: any) {
   return <div {...props} />;
 }
@@ -69,6 +77,7 @@ const components = {
   Image: RoundedImage,
   a: CustomLink,
   Inner,
+  LargeInner,
   ImageGrid,
   Box,
   LinksBox,
