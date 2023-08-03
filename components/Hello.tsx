@@ -35,7 +35,7 @@ export default function Hello() {
                 <p>
                   I’m the co-founder of{" "}
                   <a
-                    href="premieroctet.com"
+                    href="https://premieroctet.com"
                     target="_blank"
                     className="transition-colors hover:text-primary-500"
                   >
