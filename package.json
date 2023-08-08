@@ -39,6 +39,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
     "@types/luxon": "^3.3.0",
+    "cssnano": "^6.0.1",
     "prettier": "2.8",
     "prettier-plugin-tailwindcss": "^0.4.1"
   }
