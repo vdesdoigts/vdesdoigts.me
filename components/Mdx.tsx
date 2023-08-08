@@ -3,6 +3,20 @@ import { useMDXComponent } from "next-contentlayer/hooks";
 import Image from "next/image";
 import Link from "next/link";
 
+function Info({ label }: { label: string }) {
+  return (
+    <div className="pt-2">
+      <div className="not-prose rounded-md bg-primary-50 px-6 py-4 prose-p:text-sm">
+        <div className="flex">
+          <div className="flex-1 md:flex md:justify-between">
+            <p className="text-base font-light text-primary-600">{label}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 const CustomLink = (props: any) => {
   const href = props.href;
 
@@ -19,6 +33,33 @@ const CustomLink = (props: any) => {
   }
 
   return <a target="_blank" rel="noopener noreferrer" {...props} />;
+};
+
+const MainLink = ({ label, ...props }: any) => {
+  const href = props.href;
+
+  if (href.startsWith("/")) {
+    return (
+      <Link
+        href={href}
+        className="inline-flex items-center gap-2 text-primary-500 transition-all hover:translate-x-1"
+      >
+        <span className="inline-block text-lg">→</span>{" "}
+        <span className="inline-block text-lg font-light">{label}</span>
+      </Link>
+    );
+  }
+
+  return (
+    <a
+      {...props}
+      target="_blank"
+      className="inline-flex items-center gap-2 text-primary-500 transition-all hover:translate-x-1"
+    >
+      <span className="inline-block text-lg">→</span>{" "}
+      <span className="inline-block text-lg font-light">{label}</span>
+    </a>
+  );
 };
 
 function RoundedImage(props: any) {
@@ -53,6 +94,16 @@ function ImageGrid(props: any) {
   );
 }
 
+function Video({ mp4Src, oggSrc }: { mp4Src: string; oggSrc: string }) {
+  return (
+    <video width="320" height="240" controls className="w-full">
+      {mp4Src && <source src={mp4Src} type="video/mp4" />}
+      {oggSrc && <source src={oggSrc} type="video/ogg" />}
+      Your browser does not support the video tag.
+    </video>
+  );
+}
+
 function FolderGrid({
   links,
   ...props
@@ -74,14 +125,17 @@ function FolderGrid({
 }
 
 const components = {
+  Info: Info,
   Image: RoundedImage,
   a: CustomLink,
+  MainLink: MainLink,
   Inner,
   LargeInner,
   ImageGrid,
   Box,
   LinksBox,
   FolderGrid,
+  Video,
 };
 
 interface MdxProps {

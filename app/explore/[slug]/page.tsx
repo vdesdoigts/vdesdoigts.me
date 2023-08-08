@@ -80,7 +80,7 @@ export default async function ExplorePage({ params }: any) {
       </header>
       <article
         className="prose prose-slate max-w-none lg:prose-xl
-      prose-h2:mb-3 prose-h2:mt-16 prose-h2:text-2xl prose-h2:font-light
+      prose-h2:mb-3 prose-h2:mt-16 prose-h2:text-3xl prose-h2:font-light
       prose-p:font-light
       prose-a:font-light
       prose-a:text-primary-500 prose-a:no-underline prose-li:font-light

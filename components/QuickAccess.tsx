@@ -10,8 +10,7 @@ export default function QuickAccess() {
             className="text-lg font-light hover:text-primary-500"
             href="/explore/genshin-impact-companion"
           >
-            <span className="text-lg">&#x2022;</span> Companion tool for Genshin
-            Impact
+            Companion tool for Genshin Impact
           </a>
         </li>
         <li>
@@ -19,8 +18,7 @@ export default function QuickAccess() {
             className="text-lg font-light hover:text-primary-500"
             href="/explore/the-journey"
           >
-            <span className="text-lg">&#x2022;</span> Animated showcase of
-            LeBron James' career
+            Animated showcase of LeBron James' career
           </a>
         </li>
       </ul>
