@@ -32,8 +32,8 @@ export default function Playgrounds() {
         <div className="container mx-auto max-w-[780px] px-4">
           <p>
             Find the closest streetball courts near you. Join or organize
-            events, invite your friends, follow other players' activity. Join
-            the growing community and connect with friends and new players
+            events, invite your friends, follow other players&apos; activity.
+            Join the growing community and connect with friends and new players
             wherever you go.
           </p>
         </div>
@@ -114,10 +114,10 @@ export default function Playgrounds() {
             iteration and the recent launch of the Playgrounds - Basketball.
           </p>
           <p>
-            It's been a rewarding and captivating project, where I've invested
-            my personal time, allowing me to explore skill areas that were
-            previously unfamiliar to me. A project that has evolved over time,
-            both in substance and form.
+            It&apos;s been a rewarding and captivating project, where I&apos;ve
+            invested my personal time, allowing me to explore skill areas that
+            were previously unfamiliar to me. A project that has evolved over
+            time, both in substance and form.
           </p>
           <p>
             What began as a passionate student project became a side project
@@ -126,10 +126,10 @@ export default function Playgrounds() {
             <strong>to see it through to the end</strong>.
           </p>
           <p>
-            Certainly, the task didn't appear too daunting considering the final
-            outcome. The tools evolved, both in application development and
-            server-side setup, enabling me to create the current version in just
-            a few months. One pursuit often leads to another, especially
+            Certainly, the task didn&apos;t appear too daunting considering the
+            final outcome. The tools evolved, both in application development
+            and server-side setup, enabling me to create the current version in
+            just a few months. One pursuit often leads to another, especially
             concerning communication about the application and the establishment
             / consolidation of a streetball community, organizing sponsored
             tournaments, and more.

@@ -54,7 +54,7 @@ export default function SearchResults({ query, items }: SearchResultsProps) {
         <p className="mt-2 text-xs text-zinc-700 dark:text-zinc-400">
           Nothing found for{" "}
           <strong className="break-words font-semibold text-zinc-900 dark:text-white">
-            &lsquo;{query}&rsquo;
+            &apos;{query}&apos;
           </strong>
           . Please try again.
         </p>

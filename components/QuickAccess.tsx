@@ -18,7 +18,7 @@ export default function QuickAccess() {
             className="text-lg font-light hover:text-primary-500"
             href="/explore/the-journey"
           >
-            Animated showcase of LeBron James' career
+            Animated showcase of LeBron James&apos; career
           </a>
         </li>
       </ul>
