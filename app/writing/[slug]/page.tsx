@@ -43,7 +43,7 @@ export async function generateMetadata({
       description,
       type: "article",
       publishedTime,
-      url: `https://vdesdoigts.me/blog/${slug}`,
+      url: `https://vdesdoigts.me/${slug}`,
       images: [
         {
           url: ogImage,
