@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { Roboto, Roboto_Slab } from "next/font/google";
 import "./globals.css";
 
@@ -26,7 +27,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${roboto.variable} ${robotoSlab.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
