@@ -124,6 +124,19 @@ function FolderGrid({
   );
 }
 
+function VimeoEmbed({ id }: { id: string }) {
+  return (
+    <div className="relative aspect-video">
+      <iframe
+        className="absolute h-full w-full"
+        src={`https://player.vimeo.com/video/${id}`}
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowFullScreen
+      />
+    </div>
+  );
+}
+
 const components = {
   Info: Info,
   Image: RoundedImage,
@@ -136,6 +149,7 @@ const components = {
   LinksBox,
   FolderGrid,
   Video,
+  VimeoEmbed,
 };
 
 interface MdxProps {

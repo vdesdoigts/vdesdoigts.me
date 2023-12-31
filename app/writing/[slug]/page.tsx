@@ -80,11 +80,11 @@ export default async function WritingPage({ params }: any) {
       </header>
       <article
         className="prose prose-slate max-w-none lg:prose-xl
-      prose-h2:mb-3 prose-h2:mt-16 prose-h2:text-2xl prose-h2:font-light
+      prose-h2:mb-3 prose-h2:mt-16 prose-h2:font-serif prose-h2:text-2xl
+      prose-h2:font-light
       prose-p:font-light
-      prose-a:font-light
-      prose-a:text-primary-500 prose-a:no-underline prose-li:font-light
-      lg:prose-h2:font-serif lg:prose-h3:text-3xl
+      prose-a:font-light prose-a:text-primary-500 prose-a:no-underline
+      prose-li:font-light lg:prose-h3:text-3xl
       lg:prose-strong:font-normal"
       >
         <header className="not-prose container mx-auto max-w-[780px] px-4 pb-6">

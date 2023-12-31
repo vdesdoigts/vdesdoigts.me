@@ -7,11 +7,11 @@ image: /images/sorarium/og.png
 
 <Inner>
 
-<MainLink href="https://sorarium.club/" label="sorarium.club" />
-
 [Sorare](https://sorare.com/) is an online fantasy NBA platform that combines the excitement of traditional fantasy sports with the world of blockchain technology. It offers a unique gaming experience centered around collecting, trading, and managing digital player cards representing real-life players.
 
-As an avid NBA fan, I found myself drawn to the game and acquired a few cards. However, as a passionate collector, I realized that the platform didn't quite offer the variety and customization I desired. **I wanted the ability to showcase my own unique collections and share them with the Sorare community.** That's why I created [Sorarium](https://sorarium.club/).
+As an avid NBA fan, I found myself drawn to the game and acquired a few cards. However, as a passionate collector, I realized that the platform didn't quite offer the variety and customization I desired. **I wanted the ability to showcase my own unique collections and share them with the Sorare community.** That's why I created **Sorarium**.
+
+<Info label="Edit: The project is no longer online. Since 2023, Sorare has offered all of the features developed in Sorarium. Then, I no longer saw the point in keeping it up to date." />
 
 </Inner>
 
@@ -27,13 +27,21 @@ Sorarium is a web app that allows Sorare users to create and share their own uni
 
 </Inner>
 
-<LargeInner>![Sorarium homepage](/images/sorarium/collections.jpg)</LargeInner>
+<LargeInner>
+  <Video mp4Src="/images/sorarium/front.mp4" />
+</LargeInner>
 
 <Inner>
 ## Under the Hood
 
 Sorarium is a [Next.js](https://nextjs.org/) project, with [Prisma](https://www.prisma.io/) to manage the database and [Material UI](https://mui.com/) for the UI.
 
+</Inner>
+
+<LargeInner>
+  <Video mp4Src="/images/sorarium/back.mp4" />
+</LargeInner>
+<Inner>
 Nothing very fancy here, but let's talk about the [Sorare GraphQL API](https://github.com/sorare/api), which allows me to query information about the user's cards. To get started [I had to register and obtain credentials](https://help.sorare.com/hc/en-us/articles/10873240230941-How-can-I-get-access-to-Sorare-s-API-). Once registered, I can authenticate requests to retrieve data from Sorare's API. If you are interested, you can check the [Sports GraphQL playground](https://api.sorare.com/sports/graphql/playground) to see what's available.
 
 ```tsx
@@ -114,10 +122,6 @@ Hope you found this interesting, see you later!
 <Box className="pt-16">
   <LinksBox
     links={[
-      {
-        label: "sorarium.club",
-        url: "https://sorarium.club/",
-      },
       {
         label: "github.com/sorarium.club",
         url: "https://github.com/sorarium.club",
