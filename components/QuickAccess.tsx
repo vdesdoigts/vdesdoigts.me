@@ -16,9 +16,9 @@ export default function QuickAccess() {
         <li>
           <a
             className="text-lg font-light hover:text-primary-500"
-            href="/explore/the-journey"
+            href="https://vdesdoigts.notion.site/The-Great-NBA-Dashboard-2b9d968e8b37494ba0ff943e8f42aa8d"
           >
-            Animated showcase of LeBron James&apos; career
+            NBA season games, teams and players in Notion
           </a>
         </li>
       </ul>

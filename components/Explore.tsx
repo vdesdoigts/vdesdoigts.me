@@ -1,7 +1,7 @@
 import Heading from "@/components/Heading";
 import QuickAccess from "@/components/QuickAccess";
 import ShowItem from "@/components/ShowItem";
-import NotionNBA from "@/components/previews/NotionNBA";
+import Journey from "@/components/previews/Journey";
 import Sorarium from "@/components/previews/Sorarium";
 import Link from "next/link";
 
@@ -23,16 +23,13 @@ export default function Explore() {
         </div>
         <div className="grid w-full grid-cols-1 gap-x-8 gap-y-14 pt-8 lg:grid-cols-3">
           <div className="col-span-1">
-            <Link
-              href="https://www.notion.so/vdesdoigts/The-Great-NBA-Dashboard-2b9d968e8b37494ba0ff943e8f42aa8d?pvs=4"
-              target="_blank"
-            >
+            <Link href="/explore/the-journey">
               <ShowItem
-                desc="Season games, teams and players in Notion"
-                title="NBA in Notion"
-                url="notion.app/nba-schedule"
+                desc="Animated showcase of LeBron James' career"
+                title="The Journey"
+                url="vdesdoigts.me/the-journey"
               >
-                <NotionNBA />
+                <Journey />
               </ShowItem>
             </Link>
           </div>
