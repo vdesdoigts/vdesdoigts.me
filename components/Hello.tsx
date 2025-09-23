@@ -1,5 +1,7 @@
 import Image from "next/image";
 import CompaniesText from "./CompaniesText";
+import HelloThere from "./HelloThere";
+import HelloThereStroke from "./HelloThereStroke";
 
 export default function Hello() {
   return (
@@ -9,23 +11,15 @@ export default function Hello() {
           <div className="col-span-1 lg:col-span-2 lg:col-start-2">
             <div>
               <div className="relative pb-11">
-                <Image
-                  priority
-                  width="501"
-                  height="95"
-                  src="/assets/hello-there-stroke.svg"
-                  alt="hello there"
+                <HelloThereStroke
+                  width={501}
+                  height={95}
                   className="relative z-10"
-                  loading="eager"
                 />
-                <Image
-                  priority
-                  width="501"
-                  height="95"
-                  src="/assets/hello-there.svg"
-                  alt="hello there"
+                <HelloThere
+                  width={501}
+                  height={95}
                   className="absolute left-[2px] top-[2px] z-0"
-                  loading="eager"
                 />
               </div>
               <div className="max-w-[45rem] text-2xl font-light leading-normal lg:text-3xl">
