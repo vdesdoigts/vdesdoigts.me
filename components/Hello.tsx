@@ -10,7 +10,7 @@ export default function Hello() {
         <div className="grid w-full grid-cols-1 gap-x-8 lg:grid-cols-3">
           <div className="col-span-1 lg:col-span-2 lg:col-start-2">
             <div>
-              <div className="relative pb-11">
+              <div className="relative pb-6">
                 <HelloThereStroke
                   width={501}
                   height={95}
@@ -19,7 +19,7 @@ export default function Hello() {
                 <HelloThere
                   width={501}
                   height={95}
-                  className="absolute left-[2px] top-[2px] z-0"
+                  className="absolute left-[2px] top-[1px] z-0"
                 />
               </div>
               <div className="max-w-[45rem] text-2xl font-light leading-normal lg:text-3xl">
