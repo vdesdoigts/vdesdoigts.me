@@ -6,7 +6,7 @@ import ToyLovers from "@/components/previews/ToyLovers";
 
 export default function Work() {
   return (
-    <div className="pt-20 xl:pt-44">
+    <div className="pt-20 xl:pt-40">
       <div className="container mx-auto px-4">
         <div className="pb-6">
           <Heading title="Work" subtitle="In production" />

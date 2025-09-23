@@ -3,7 +3,7 @@ import CompaniesText from "./CompaniesText";
 
 export default function Hello() {
   return (
-    <div className="flex basis-[100vh] bg-main xl:max-h-[35.625rem] 2xl:max-h-[47.5rem]">
+    <div className="flex bg-main lg:basis-[100vh] xl:max-h-[35.625rem] 2xl:max-h-[47.5rem]">
       <div className="container mx-auto flex items-end px-4 py-20 lg:pb-48 lg:pt-24 xl:pb-20 xl:pt-24 2xl:pb-16 2xl:pt-24">
         <div className="grid w-full grid-cols-1 gap-x-8 lg:grid-cols-3">
           <div className="col-span-1 lg:col-span-2 lg:col-start-2">
@@ -34,7 +34,7 @@ export default function Hello() {
                   strong skills in development and user experience, I love
                   creating user-friendly interfaces.
                 </p>
-                <p>
+                <p className="pb-8">
                   I’m the co-founder of{" "}
                   <a
                     href="https://premieroctet.com"
