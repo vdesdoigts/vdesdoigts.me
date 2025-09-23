@@ -1,6 +1,5 @@
 import BackButton from "@/components/BackButton";
 import Footer from "@/components/Footer";
-import LinksBox from "@/components/LinksBox";
 import { DateTime } from "luxon";
 import Image from "next/image";
 
@@ -241,6 +240,28 @@ export default function Playgrounds() {
           </ul>
         </div>
         <div className="container mx-auto max-w-[780px] px-4">
+          <h2>Current status</h2>
+          <p>
+            After two successful years in production, I made the decision to
+            discontinue the Playgrounds - Basketball app. The reality of
+            building and maintaining a thriving community requires dedicated
+            time and resources that I could no longer commit to.
+          </p>
+          <p>
+            The app had found its audience and was serving players across
+            multiple cities, but sustaining meaningful community
+            engagement—organizing events, moderating interactions, expanding to
+            new locations, and continuously improving the platform—demanded more
+            than I could provide as a solo developer juggling other
+            responsibilities.
+          </p>
+          <p>
+            The Playgrounds project taught me lessons about community building,
+            mobile and back-end development, it remains one of my most rewarding
+            endeavors.
+          </p>
+        </div>
+        {/* <div className="container mx-auto max-w-[780px] px-4">
           <div className="pt-16">
             <LinksBox
               title="Links"
@@ -260,7 +281,7 @@ export default function Playgrounds() {
               ]}
             />
           </div>
-        </div>
+        </div> */}
       </article>
       <Footer />
     </main>
