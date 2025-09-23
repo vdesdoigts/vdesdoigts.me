@@ -16,6 +16,7 @@ export default function Hello() {
                   src="/assets/hello-there-stroke.svg"
                   alt="hello there"
                   className="relative z-10"
+                  loading="eager"
                 />
                 <Image
                   priority
@@ -24,6 +25,7 @@ export default function Hello() {
                   src="/assets/hello-there.svg"
                   alt="hello there"
                   className="absolute left-[2px] top-[2px] z-0"
+                  loading="eager"
                 />
               </div>
               <div className="max-w-[45rem] text-2xl font-light leading-normal lg:text-3xl">
@@ -54,10 +56,11 @@ export default function Hello() {
                 width="1440"
                 height="1405"
                 src="/assets/avatar-color.png"
-                alt="hello there"
+                alt="Avatar of Vincent Desdoigts"
                 className="z-0 w-full max-w-none lg:absolute lg:bottom-[-160px] lg:right-[-70px] lg:w-[225%]
                 xl:bottom-[-150px] xl:right-[-80px] xl:w-[150%]
                 2xl:bottom-[-150px] 2xl:right-[-50px] 2xl:w-[140%]"
+                loading="eager"
               />
             </div>
           </div>

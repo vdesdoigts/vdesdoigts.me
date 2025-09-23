@@ -6,12 +6,22 @@ const roboto = Roboto({
   variable: "--font-roboto",
   weight: ["100", "300", "400", "500", "700"],
   subsets: ["latin"],
+  display: "block", // Prevents invisible text during font load
+  fallback: [
+    "system-ui",
+    "-apple-system",
+    "BlinkMacSystemFont",
+    "Segoe UI",
+    "sans-serif",
+  ],
 });
 
 const robotoSlab = Roboto_Slab({
   variable: "--font-roboto-slab",
   weight: ["400", "500", "700"],
   subsets: ["latin"],
+  display: "block", // Prevents invisible text during font load
+  fallback: ["Georgia", "Times New Roman", "serif"],
 });
 
 export const metadata = {
