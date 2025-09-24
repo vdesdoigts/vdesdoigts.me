@@ -16,7 +16,7 @@ export default function Journey() {
       />
       <div className="absolute bottom-0 left-0 top-0 h-full">
         <HoverVideoPlayer
-          videoSrc="/images/the-journey/journey-preview.mp4"
+          videoSrc="https://annl25wby5ov7nyc.public.blob.vercel-storage.com/journey-preview.mp4"
           className="h-full w-full object-contain"
           videoClassName="h-full object-cover"
         />

@@ -94,9 +94,19 @@ function ImageGrid(props: any) {
   );
 }
 
-function Video({ mp4Src, oggSrc }: { mp4Src: string; oggSrc: string }) {
+function Video({
+  mp4Src,
+  oggSrc,
+  width = 320,
+  height = 240,
+}: {
+  mp4Src: string;
+  oggSrc: string;
+  width: number;
+  height: number;
+}) {
   return (
-    <video width="320" height="240" controls className="w-full">
+    <video width={width} height={height} controls className="w-full">
       {mp4Src && <source src={mp4Src} type="video/mp4" />}
       {oggSrc && <source src={oggSrc} type="video/ogg" />}
       Your browser does not support the video tag.
